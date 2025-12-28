@@ -1,0 +1,28 @@
+
+.portal {
+    width: 200px;
+    height: 200px;
+    border: 3px solid #00f0ff;
+    border-radius: 50%;
+    box-shadow: 0 0 30px #00f0ff, inset 0 0 30px #00f0ff;
+    position : relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 30px #00f0ff, inset 0 0 30px #00f0ff;
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 60px #00f0ff, inset 0 0 60px #00f0ff;
+        transform: scale(1.1);
+    }
+    100% {
+        box-shadow: 0 0 30px #00f0ff, inset 0 0 30px #00f0ff;
+        transform: scale(1);
+    }
+}
