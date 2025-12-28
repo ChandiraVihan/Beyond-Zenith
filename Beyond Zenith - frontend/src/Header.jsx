@@ -1,9 +1,11 @@
-
+import './Header.css'
 
 function header(){
 
     return (
-        <h1>Beyond Zenith</h1>
+        <header>
+            <h1>Beyond Zenith</h1>
+        </header>
                 )
 }
 
