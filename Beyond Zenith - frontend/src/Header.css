@@ -2,7 +2,9 @@ header {
     margin: 0;
     height: 70px;
     text-align: center;
-    background-color: antiquewhite;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    color: aliceblue;
     display: flex;
     justify-content: center;    
     align-items: center;

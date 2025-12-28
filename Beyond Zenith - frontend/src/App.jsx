@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <video autoPlay loop muted className="background-video">
+      <video autoPlay loop muted className="bg-video">
         <source src={background} type="video/mp4" />
       </video>
       <Header />
