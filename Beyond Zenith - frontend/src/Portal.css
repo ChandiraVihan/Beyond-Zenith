@@ -1,8 +1,14 @@
 
+.portal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
 .portal {
-    width: 200px;
-    height: 200px;
-    border: 5px solid #00f0ff;
+    width: 320px;
+    height: 320px;
+    border: 6px solid #00f0ff;
     border-radius: 50%;
     box-shadow: 0 0 30px #00f0ff, inset 0 0 30px #00f0ff;
     position : relative;
@@ -27,3 +33,4 @@
     }
     
 } 
+
