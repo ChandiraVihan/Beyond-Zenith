@@ -18,9 +18,13 @@ function Background(){
 
     const [currentIndex, setCurrentIndex] = useState(Math.floor(Math.random() * backgrounds.length))
 
+    const loop =() => setCurrentIndex((currentIndex + 1) % backgrounds.length)
+
+
     return (
-    <video autoPlay loop muted className="bg-video">
-        <source src={backgrounds[currentIndex]} type="video/mp4" />
+    <video autoPlay muted className="bg-video" onEnded={loop}
+    src={backgrounds[currentIndex]} type="video/mp4"
+    >
       </video>
     )
 }
