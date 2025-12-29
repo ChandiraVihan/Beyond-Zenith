@@ -6,11 +6,15 @@ function header(){
         console.log("Login Clicked")
     }
 
+    function handleLogo(){
+        console.log("clicked")
+    }
+
     return (
         <>
         <header>
             <nav> 
-            <h1>Beyond Zenith</h1>
+            <h1 onClick={handleLogo}>Beyond Zenith</h1>
             <div>
             <button onClick={handleClick}>LOGIN {'>'}</button>
             </div>

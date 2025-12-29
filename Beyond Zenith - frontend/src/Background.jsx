@@ -1,16 +1,26 @@
 import { useState } from 'react'
-import bg1 from './assets/bg1.mp4'
 import bg2 from './assets/bg2.mp4'
+import bg3 from './assets/bg3.mp4'
+import bg4 from './assets/bg4.mp4'
+import bg5 from './assets/bg5.mp4'
+import bg6 from './assets/bg6.mp4'
+import bg7 from './assets/bg7.mp4'
+import bg9 from './assets/bg9.mp4'
+import bg10 from './assets/bg10.mp4'
+import bg13 from './assets/bg13.mp4'
+
+
+
 import './Background.css'
 function Background(){
 
-    const backgrounds = [bg1]
+    const backgrounds = [bg2, bg3, bg4, bg5, bg6, bg7, bg9, bg10, bg13]
 
-    const [currentBg, setCurrentBg] = useState(undefined)
+    const [currentIndex, setCurrentIndex] = useState(Math.floor(Math.random() * backgrounds.length))
 
     return (
     <video autoPlay loop muted className="bg-video">
-        <source src={backgrounds} type="video/mp4" />
+        <source src={backgrounds[currentIndex]} type="video/mp4" />
       </video>
     )
 }
