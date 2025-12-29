@@ -1,15 +1,13 @@
 import './App.css'
 import Header from './Header.jsx'
 import Portal from './Portal.jsx'
-import background from './assets/background.mp4'
+import Background from './Background.jsx'
 
 function App() {
 
   return (
     <>
-      <video autoPlay loop muted className="bg-video">
-        <source src={background} type="video/mp4" />
-      </video>
+      <Background />
       <Header />
       <Portal />
     </>
