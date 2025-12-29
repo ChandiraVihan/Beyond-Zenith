@@ -6,4 +6,16 @@
   height: 100vh;
   object-fit: cover;
   z-index: -1;
+  background-color: black;
+  animation: fadeIn 1.5s ease-in-out;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 }

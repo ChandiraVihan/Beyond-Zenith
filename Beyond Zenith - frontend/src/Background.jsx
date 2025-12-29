@@ -22,8 +22,11 @@ function Background(){
 
 
     return (
-    <video autoPlay muted className="bg-video" onEnded={loop}
-    src={backgrounds[currentIndex]} type="video/mp4"
+    <video
+    key={currentIndex} 
+    autoPlay muted className="bg-video"
+    onEnded={loop}
+    src={backgrounds[currentIndex]} 
     >
       </video>
     )
