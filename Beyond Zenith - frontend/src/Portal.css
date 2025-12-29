@@ -3,22 +3,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 640px;
-}
-.portal {
-    width: 320px;
-    height: 320px;
-    border: 6px solid #00f0ff;
-    border-radius: 50%;
-    box-shadow: 0 0 30px #00f0ff, inset 0 0 30px #00f0ff;
-    position : relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: pulse 3s infinite ease-in-out;
+    height: 630px;
+    overflow: hidden;
 }
 
-@keyframes pulse {
+#portal {
+    width: 0px;
+    height: 0px;
+    box-shadow: 0 0 30px #00f0ff, inset 0 0 30px #00f0ff;
+    position : relative;
+    animation: rotate 0.69s linear infinite;
+}
+
+.spark {
+    position: absolute;
+    width: 1px;
+    height: 0px;
+    background: linear-gradient(#00f0ff, transparent);
+    transform-origin: top left;
+    animation: resizer 1s ease-in-out infinite;
+
+}
+
+/* @keyframes pulse {
     0% {
         box-shadow: 0 0 30px #00f0ff, inset 0 0 30px #00f0ff;
         transform: scale(1);
@@ -32,5 +39,27 @@
         transform: scale(1);
     }
     
-} 
+}  */
+
+@keyframes resizer {
+  0% {
+    height: 60px;
+  }
+  50% {
+    height: 64px; /* This creates the jagged outer edge */
+  }
+  100% {
+    height: 60px;
+  }
+}
+
+/* Rotates the entire portal assembly */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) scale(1.69);
+  }
+  to {
+    transform: rotate(360deg) scale(1.69);
+  }
+}
 

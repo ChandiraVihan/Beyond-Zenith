@@ -5,7 +5,7 @@ import Background from './Background.jsx'
 
 function App() {
 
-  const portalOn = false
+  const portalOn = true
 
   return (
     <>
