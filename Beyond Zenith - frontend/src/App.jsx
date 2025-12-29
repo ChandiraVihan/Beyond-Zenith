@@ -5,11 +5,14 @@ import Background from './Background.jsx'
 
 function App() {
 
+  const portalOn = false
+
   return (
     <>
       <Background />
       <Header />
-      <Portal />
+     if{ portalOn === true
+      ? <Portal /> : undefined }
     </>
   )
 }

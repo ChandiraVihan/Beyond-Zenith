@@ -9,6 +9,7 @@ import bg9 from './assets/bg9.mp4'
 import bg10 from './assets/bg10.mp4'
 import bg13 from './assets/bg13.mp4'
 
+/* To do removing potential repeat*/
 
 
 import './Background.css'
