@@ -18,26 +18,30 @@
     animation: rotate 1.6s linear infinite;
 }
 
-/* The Blue Ring (Purely visual, no background color) */
 .glow-ring {
   position: absolute;
-  /* Size of the ring */
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  
-  /* Transparent background so Earth shows through */
   background-color: transparent;
   
-  /* The Glow Effect */
+  /* --- CRITICAL FIX START --- */
+  /* This moves the ring's center to the wrapper's center */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  /* --- CRITICAL FIX END --- */
+
   box-shadow: 0px 0px 40px 10px #00f0ff, inset 0px 0px 20px 5px #00f0ff;
   border: 1px solid rgba(0, 240, 255, 0.3);
   
-  animation: glow-pulse 3s ease-in-out infinite;
+  animation: glow-pulse 7s ease-in-out infinite;
 }
 
 .spark {
     position: absolute;
+    top:0;
+    bottom: 0;
     width: 1px;
     height: 0px;
     background: linear-gradient(#00f0ff, transparent);
@@ -78,28 +82,25 @@
 /* Rotates the entire portal assembly */
 @keyframes rotate {
   from {
-    transform: rotate(0deg) scale(1.69);
+    transform: rotate(0deg) scale(1.5);
   }
   to {
-    transform: rotate(360deg) scale(1.69);
+    transform: rotate(360deg) scale(1.5);
   }
 }
 
 @keyframes glow-pulse {
   0% {
-    /* Base glow size */
-    box-shadow: 0 0 60px 30px #00f0ff;
-    opacity: 0.8;
+    box-shadow: 0px 0px 40px 10px #00f0ff, inset 0px 0px 20px 5px #00f0ff;
+    opacity: 0.6;
   }
   50% {
-    /* Larger, brighter glow */
-    box-shadow: 0 0 100px 50px #00f0ff;
-    opacity: 1;
+    box-shadow: 0px 0px 70px 20px #00f0ff, inset 0px 0px 40px 10px #00f0ff;
+    opacity: 0.8;
   }
   100% {
-    /* Back to base */
-    box-shadow: 0 0 60px 30px #00f0ff;
-    opacity: 0.8;
+    box-shadow: 0px 0px 40px 10px #00f0ff, inset 0px 0px 20px 5px #00f0ff;
+    opacity: 0.6;
   }
 }
 
