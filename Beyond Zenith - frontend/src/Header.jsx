@@ -1,4 +1,5 @@
 import './Header.css'
+import logo from './assets/logo.png'
 
 function header(){
 
@@ -14,6 +15,7 @@ function header(){
         <>
         <header>
             <nav> 
+            <img className="logo" src={logo}/>
             <h1 onClick={handleLogo}>Beyond Zenith</h1>
             <div>
             <button onClick={handleClick}>LOGIN {'>'}</button>

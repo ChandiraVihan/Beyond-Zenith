@@ -1,7 +1,7 @@
 header {
     position: relative;
     margin: 0;
-    height: 80px;
+    height: 120px;
     color: aliceblue;
     display: flex;
     justify-content: space-evenly;    
@@ -30,4 +30,9 @@ header > nav {
     justify-content: center;
     align-items: end;
     gap: 50px;
+}
+
+.logo{
+    height: 70px;
+    width: 70px;
 }
