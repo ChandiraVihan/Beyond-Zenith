@@ -1,16 +1,16 @@
 import React, { useMemo } from 'react'
 import './Portal.css'
 
-function portal() {
+function portal(props) {
 
   const sparks = useMemo(() => {
 
     const sparkArray = [];
 
-    for (let i = 0; i < 360; i++) {
+    for (let i = 0; i < 720; i++) {
 
       const rotate = i * 2;
-      const stretch = Math.random() * (120 - 100) + 100;
+      const stretch = Math.random() * (114 - 100) + 100;
 
       sparkArray.push({
         id: i,

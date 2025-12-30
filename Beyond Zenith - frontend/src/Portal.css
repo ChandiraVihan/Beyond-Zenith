@@ -8,11 +8,12 @@
 }
 
 #portal {
+    position:relative;
     width: 0px;
     height: 0px;
-    box-shadow: 0 0 30px #00f0ff, inset 0 0 30px #00f0ff;
-    position : relative;
-    animation: rotate 0.69s linear infinite;
+    border-radius: 50%;
+    box-shadow: 0 0 50px 10px #00f0ff, inset 0 0 30px 5px #00f0ff;
+    animation: rotate 1.6s linear infinite, glow-pulse 3s ease-in-out infinite;
 }
 
 .spark {
@@ -22,6 +23,7 @@
     background: linear-gradient(#00f0ff, transparent);
     transform-origin: top left;
     animation: resizer 1s ease-in-out infinite;
+    z-index: 2;
 
 }
 
@@ -43,13 +45,13 @@
 
 @keyframes resizer {
   0% {
-    height: 60px;
+    height: 20px;
   }
   50% {
-    height: 64px; /* This creates the jagged outer edge */
+    height: 24px; /* This creates the jagged outer edge */
   }
   100% {
-    height: 60px;
+    height: 20px;
   }
 }
 
@@ -60,6 +62,24 @@
   }
   to {
     transform: rotate(360deg) scale(1.69);
+  }
+}
+
+@keyframes glow-pulse {
+  0% {
+    /* Base glow size */
+    box-shadow: 0 0 60px 30px #00f0ff;
+    opacity: 0.8;
+  }
+  50% {
+    /* Larger, brighter glow */
+    box-shadow: 0 0 100px 50px #00f0ff;
+    opacity: 1;
+  }
+  100% {
+    /* Back to base */
+    box-shadow: 0 0 60px 30px #00f0ff;
+    opacity: 0.8;
   }
 }
 
