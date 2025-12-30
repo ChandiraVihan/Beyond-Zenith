@@ -26,7 +26,8 @@ function portal(props) {
   
   return (
     <div className="portal-container">
-    <div id="portal">
+    <div id="portal-wrapper">
+    <div className="glow-ring"></div>
       {sparks.map((spark) => (
         <div
         key={spark.id}
