@@ -29,10 +29,13 @@ header > nav {
     display: flex;
     justify-content: center;
     align-items: end;
-    gap: 50px;
+    gap: 350px;
 }
 
 .logo{
     height: 70px;
     width: 70px;
+    border-radius: 20px;
+    border: 7px solid #7c2a5b;
 }
+
