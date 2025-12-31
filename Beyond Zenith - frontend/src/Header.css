@@ -21,7 +21,7 @@ header::after {
     background-color: #333; 
   }
 
-header > h1 {
+header > span {
     margin: 0;
 }
 
@@ -33,9 +33,7 @@ header > nav {
 }
 
 .logo{
-    height: 70px;
-    width: 70px;
-    border-radius: 20px;
-    border: 7px solid #7c2a5b;
+    height: 90px;
+    width: 90px;
 }
 
