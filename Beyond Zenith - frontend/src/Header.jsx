@@ -21,12 +21,21 @@ function header(){
         textTransform: 'uppercase'
     };
 
+    const asciiStyle = {
+        fontFamily: '"Bungee Shade", cursive',
+        color: '#00D9FF', // Cyan
+        fontSize: '60px',
+        textAlign: 'center',
+        lineHeight: '1',
+        textShadow: '0 0 10px #00D9FF' // Adds the glow back
+    };
+
     return (
         <>
         <header>
             <nav> 
             <img className="logo" src={logo}/>
-            <span className="title" onClick={handleLogo} style={hackerTitleStyle}>
+            <span className="title" onClick={handleLogo} style={asciiStyle}>
              BEYOND <br></br>
             ZENITH
             </span>
