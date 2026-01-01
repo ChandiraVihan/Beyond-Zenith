@@ -24,7 +24,7 @@ function header(){
     const asciiStyle = {
         fontFamily: '"Bungee Shade", cursive',
         color: '#00D9FF', // Cyan
-        fontSize: '60px',
+        fontSize: '54px',
         textAlign: 'center',
         lineHeight: '1',
         textShadow: '0 0 10px #00D9FF' // Adds the glow back
@@ -33,12 +33,14 @@ function header(){
     return (
         <>
         <header>
-            <nav> 
+            <nav>
+            <div className="title-logo">
             <img className="logo" src={logo}/>
             <span className="title" onClick={handleLogo} style={asciiStyle}>
              BEYOND <br></br>
-            ZENITH
+             ZENITH
             </span>
+            </div>
             <div>
             <button onClick={handleClick}>LOGIN {'>'}</button>
             </div>
