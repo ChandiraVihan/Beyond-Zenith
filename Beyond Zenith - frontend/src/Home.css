@@ -14,17 +14,19 @@
 
 .card {
     position:relative;
-    background-color: aqua;
     height:400px;
     width:700px;
     clip-path: path('M 0,100 A 50,50 0,0,1 50,50 L 250,50 C 275 50, 275,0 300,0 L 650,0 A 50,50 0,0,1 700,50 L 700,350 A 50,50 0,0,1 650,400 L 50,400 A 50,50 0,0,1 0,350 Z');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.card > img {
+/* .card > img {
     height:100%;
     width:100%;
-    object-fit:cover;
-}
+    object-fit:fill;
+} */
 
 .Cardtitle {
     position: absolute;
@@ -50,14 +52,7 @@
     left: 0;
     width: 50px;
     height: 52px; 
-    background-color: inherit; /* Matches the magenta color */
-    
-    /* 
-       This path creates a 'shark fin' shape that fills the gap:
-       1. Start at top-left of the gap (0,0)
-       2. Line to top-right (50,0)
-       3. Curve down to bottom-left (0,50) matching the card's curve
-    */
+    background-color: inherit; 
     clip-path: path('M 0 0 L 50 0 A 50 50 0 0 0 0 50 Z');
-    z-index: -1; /* Sits behind the title text but above the card */
+    z-index: -1; 
 }

@@ -1,8 +1,31 @@
+import { useEffect, useState } from 'react'
 import './Home.css'
+import { fetchSpaceText } from "./spaceFact";
+
 
 
 
 function Home(){
+
+    
+const [fact, setFact] = useState(() => {
+    return sessionStorage.getItem("spaceFact") || "";
+  });
+
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (fact) return;
+
+    fetchSpaceText()
+      .then(text => {
+        setFact(text);
+        sessionStorage.setItem("spaceFact", text);
+      })
+      .catch(() =>
+        setError("Unable to load space fact at the moment.")
+      );
+  }, [fact]);
 
     const MOCK_API_FEED = [
   {
@@ -35,15 +58,24 @@ function Home(){
   }
 ];
 
+    const featured = MOCK_API_FEED[1]
+
     return  (
     <>
     <div className="Poster">
     <div className="Cardtitle">
     <span>Now Showing</span>
     </div>
-    <div className="card">
-
+    <div className="card"
+    style={{
+          backgroundImage: `url(${featured.url})`,
+        }}
+    >
     </div>
+    </div>
+      <div>
+      {error && <p>{error}</p>}
+      {!error && <p>{fact || "Loading…"}</p>}
     </div>
     </>
     ) 
