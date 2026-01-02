@@ -1,0 +1,22 @@
+
+.Poster {
+  margin-top: 5%;
+  margin-left: 40%;
+  position: relative;
+  display: flex;
+  height: 400px;
+  width: 700px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-direction: column;
+  background-color: #f3e9dc;
+}
+
+.card {
+    position:relative;
+    background-color: aqua;
+    height:90%;
+    width:94%;
+    clip-path: path('M 10,20 L Z');
+}

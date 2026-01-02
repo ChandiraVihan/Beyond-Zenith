@@ -2,6 +2,7 @@ import './App.css'
 import Header from './Header.jsx'
 import Portal from './Portal.jsx'
 import Background from './Background.jsx'
+import Home from './Home.jsx'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <>
       <Background />
       <Header />
+      <Home />
      {portalOn && <Portal />}
     </>
   )
