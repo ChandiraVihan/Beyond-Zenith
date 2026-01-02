@@ -10,7 +10,7 @@
   justify-content: center;
   gap: 5px;
   flex-direction: column;
-  background-color: #f3e9dc;
+  background-color: transparent;
 }
 
 .card {
@@ -18,5 +18,27 @@
     background-color: aqua;
     height:400px;
     width:700px;
-    clip-path: path('M 0,100 A 50,50 0,0,1 50,50 L 250,50 L 300,0 L 650,0 A 50,50 0,0,1 700,50 L 700,350 A 50,50 0,0,1 650,400 L 50,400 A 50,50 0,0,1 0,350 Z');
+    clip-path: path('M 0,100 A 50,50 0,0,1 50,50 L 250,50 C 275 50, 275,0 300,0 L 650,0 A 50,50 0,0,1 700,50 L 700,350 A 50,50 0,0,1 650,400 L 50,400 A 50,50 0,0,1 0,350 Z');
 }
+
+.card > img {
+    height:100%;
+    width:100%;
+    object-fit:cover;
+}
+
+.Cardtitle {
+    position: absolute;
+    top:0;
+    left:0;
+    width:270px;
+    height: 48px;
+    background-color: aquamarine;
+    clip-path: inset(3px round 80px 0);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: larger;
+}
+
