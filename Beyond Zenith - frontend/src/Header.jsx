@@ -31,10 +31,11 @@ function header(){
              ZENITH
             </span>
             </div>
-            <span>
-                mission
-                vision
+            <div>            <span className="tags">
+               <a>Mission</a> 
+               <a>Vision</a>
             </span>
+            </div>
             <div className="btn-container">
             <button className="logButton" onClick={handleClick}>LOGIN {'>'}</button>
             </div>
