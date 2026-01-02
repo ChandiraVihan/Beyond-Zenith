@@ -11,23 +11,13 @@ function header(){
         console.log("clicked")
     }
 
-    // React Component Style Object or CSS class
-    const hackerTitleStyle = {
-        fontFamily: '"VT323", monospace', // Import this font first
-        fontSize: '48px',
-        color: '#00D9FF', // Cyan Text
-        textShadow: '0 0 5px #00D9FF, 0 0 10px #00D9FF, 0 0 20px #0A0E27', // The Neon Glow
-        letterSpacing: '4px',
-        textTransform: 'uppercase'
-    };
-
     const asciiStyle = {
         fontFamily: '"Bungee Shade", cursive',
-        color: '#00D9FF', // Cyan
+        color: '#00D9FF', // 
         fontSize: '54px',
         textAlign: 'center',
         lineHeight: '1',
-        textShadow: '0 0 10px #00D9FF' // Adds the glow back
+        textShadow: '0 0 10px #00D9FF' 
     };
 
     return (
@@ -41,8 +31,12 @@ function header(){
              ZENITH
             </span>
             </div>
-            <div>
-            <button onClick={handleClick}>LOGIN {'>'}</button>
+            <span>
+                mission
+                vision
+            </span>
+            <div className="btn-container">
+            <button className="logButton" onClick={handleClick}>LOGIN {'>'}</button>
             </div>
             </nav>
         </header>
