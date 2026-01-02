@@ -8,7 +8,6 @@
   width: 700px;
   align-items: center;
   justify-content: center;
-  gap: 5px;
   flex-direction: column;
   background-color: transparent;
 }
@@ -33,13 +32,32 @@
     left:0;
     width:300px;
     height: 50px;
-    background-color:rgb(197, 11, 98);
-    backdrop-filter: blur(300px);
+    background-color: transparent;
     color:aliceblue;
- clip-path: path('M 0 50 A 50 50 0 0 1 50 0 L 300 0 C 275 0 275 50 250 50 L 50 50 A 50 50 0 0 0 0 100 Z');    display:flex;
+    clip-path: path('M 0 50 A 50 50 0 0 1 50 0 L 300 0 C 275 0 275 50 250 50 L 50 50 A 50 50 0 0 0 0 100 Z');  
+    display:flex;
     justify-content: center;
     align-items: center;
     font-weight: bolder;
     font-size: larger;
+    border:1cm;
 }
 
+.Cardtitle::before {
+    content: "";
+    position: absolute;
+    top: 50px; 
+    left: 0;
+    width: 50px;
+    height: 52px; 
+    background-color: inherit; /* Matches the magenta color */
+    
+    /* 
+       This path creates a 'shark fin' shape that fills the gap:
+       1. Start at top-left of the gap (0,0)
+       2. Line to top-right (50,0)
+       3. Curve down to bottom-left (0,50) matching the card's curve
+    */
+    clip-path: path('M 0 0 L 50 0 A 50 50 0 0 0 0 50 Z');
+    z-index: -1; /* Sits behind the title text but above the card */
+}
