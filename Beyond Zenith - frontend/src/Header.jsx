@@ -1,5 +1,7 @@
 import './Header.css'
 import logo from './assets/logo1.png'
+import { Rocket, Satellite, Globe, Radio, ChevronRight, Play, Info } from 'lucide-react';
+
 
 function header(){
 
@@ -37,7 +39,7 @@ function header(){
             </span>
             </div>
             <div className="btn-container">
-            <button className="logButton" onClick={handleClick}>LOGIN {'>'}</button>
+            <button className="logButton" onClick={handleClick}>LOGIN <ChevronRight size={20} /></button>
             </div>
             </nav>
         </header>
