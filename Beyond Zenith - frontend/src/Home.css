@@ -16,7 +16,7 @@
 .card {
     position:relative;
     background-color: aqua;
-    height:90%;
-    width:94%;
-    clip-path: path('M 10,20 L Z');
+    height:400px;
+    width:700px;
+    clip-path: path('M 0,100 A 50,50 0,0,1 50,50 L 250,50 L 300,0 L 650,0 A 50,50 0,0,1 700,50 L 700,350 A 50,50 0,0,1 650,400 L 50,400 A 50,50 0,0,1 0,350 Z');
 }
