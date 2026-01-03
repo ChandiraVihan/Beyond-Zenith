@@ -10,6 +10,6 @@ from rest_framework.response import Response
 class UserProfileView(APIView):
     permission_classes = [IsAuthenticated]
 
-def get(self, request):
+def get(self, request):  #runs when react issues a GET request to this URL
         serializer = UserSerializer(request.user)
         return Response(serializer.data)

@@ -9,4 +9,4 @@ class CustomUser(AbstractUser):
     google_id = models.CharField(max_length=255, blank=True, unique=True)
 
 def __str__(self):
-        return self.email
+        return self.email #changes how user object looks in django admin panel from object(1) to user emails

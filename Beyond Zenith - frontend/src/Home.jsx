@@ -58,7 +58,7 @@ const [fact, setFact] = useState(() => {
   }
 ];
 
-    const featured = MOCK_API_FEED[1]
+    const featured = MOCK_API_FEED[0]
 
     return  (
     <>
@@ -73,7 +73,7 @@ const [fact, setFact] = useState(() => {
     >
     </div>
     </div>
-      <div>
+      <div className="spaceFact">
       {error && <p>{error}</p>}
       {!error && <p>{fact || "Loading…"}</p>}
     </div>

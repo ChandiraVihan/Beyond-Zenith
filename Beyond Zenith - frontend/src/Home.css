@@ -1,7 +1,7 @@
 
 .Poster {
-  margin-top: 5%;
-  margin-left: 40%;
+  margin-top: 3.5%;
+  margin-left: 45%;
   position: relative;
   display: flex;
   height: 400px;
@@ -55,4 +55,12 @@
     background-color: inherit; 
     clip-path: path('M 0 0 L 50 0 A 50 50 0 0 0 0 50 Z');
     z-index: -1; 
+}
+
+.spaceFact {
+  margin-top: 45px;
+  color: aliceblue;
+  position: relative;
+  padding: 0 50px;
+  font-size: 1.1rem;
 }
