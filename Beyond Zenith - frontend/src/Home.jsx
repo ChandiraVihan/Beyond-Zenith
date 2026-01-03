@@ -63,9 +63,10 @@ const [fact, setFact] = useState(() => {
     return  (
     <>
     <div className="Poster">
-    <div className="Cardtitle">
+    <div className="label-pill">
     <span>Now Showing</span>
     </div>
+    <div className="label-bottom">Source</div>
     <div className="card"
     style={{
           backgroundImage: `url(${featured.url})`,

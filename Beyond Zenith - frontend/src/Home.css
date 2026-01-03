@@ -1,60 +1,97 @@
 
 .Poster {
-  margin-top: 3.5%;
+  margin-top: 3%;
   margin-left: 45%;
   position: relative;
   display: flex;
-  height: 400px;
-  width: 700px;
+  height: 450px;
+  width: 750px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-color: transparent;
 }
 
+/* Container for the card */
 .card {
-    position:relative;
-    height:400px;
-    width:700px;
-    clip-path: path('M 0,100 A 50,50 0,0,1 50,50 L 250,50 C 275 50, 275,0 300,0 L 650,0 A 50,50 0,0,1 700,50 L 700,350 A 50,50 0,0,1 650,400 L 50,400 A 50,50 0,0,1 0,350 Z');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  border-radius: 16px; /* Keep main card rounded */
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* .card > img {
-    height:100%;
-    width:100%;
-    object-fit:fill;
-} */
+/* The Custom Tech Badge */
+.label-pill {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  
+  /* SIZING & SPACING */
+  padding: 8px 16px;
+  
+  /* THE CUSTOM SHAPE (Clip-path cuts the corner) */
+  background: rgba(0, 0, 0, 0.6); 
+  clip-path: polygon(
+    0 0,           /* Top Left */
+    100% 0,        /* Top Right */
+    100% 70%,      /* Right side down */
+    85% 100%,      /* The Angled Cut */
+    0 100%         /* Bottom Left */
+  );
 
-.Cardtitle {
-    position: absolute;
-    top:0;
-    left:0;
-    width:300px;
-    height: 50px;
-    background-color: transparent;
-    color:aliceblue;
-    clip-path: path('M 0 50 A 50 50 0 0 1 50 0 L 300 0 C 275 0 275 50 250 50 L 50 50 A 50 50 0 0 0 0 100 Z');  
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bolder;
-    font-size: larger;
-    border:1cm;
+  /* BORDER HACK (Since clip-path cuts borders, we use a backdrop or shadow) */
+  border-left: 2px solid #a855f7; /* Purple accent line on the left */
+  
+  /* GLASS EFFECT */
+  backdrop-filter: blur(8px);
+  
+  /* TEXT STYLING */
+  color: #e2e8f0;
+  font-family: 'Courier New', Courier, monospace; /* Tech font is crucial! */
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 2px; /* Wide spacing = Cinematic */
+  font-weight: bold;
+  z-index: 69;
 }
 
-.Cardtitle::before {
-    content: "";
-    position: absolute;
-    top: 50px; 
-    left: 0;
-    width: 50px;
-    height: 52px; 
-    background-color: inherit; 
-    clip-path: path('M 0 0 L 50 0 A 50 50 0 0 0 0 50 Z');
-    z-index: -1; 
+.label-bottom {
+  position: absolute;
+  top: 410px;
+  left: 650px;
+  
+  /* SIZING & SPACING */
+  padding: 8px 16px;
+  
+  /* THE CUSTOM SHAPE (Clip-path cuts the corner) */
+  background: rgba(0, 0, 0, 0.6); 
+  clip-path: polygon(
+    0 0,           /* Top Left */
+    100% 0,        /* Top Right */
+    100% 70%,      /* Right side down */
+    85% 100%,      /* The Angled Cut */
+    0 100%         /* Bottom Left */
+  );
+
+  /* BORDER HACK (Since clip-path cuts borders, we use a backdrop or shadow) */
+  border-left: 2px solid #a855f7; /* Purple accent line on the left */
+  
+  /* GLASS EFFECT */
+  backdrop-filter: blur(8px);
+  
+  /* TEXT STYLING */
+  color: #e2e8f0;
+  font-family: 'Courier New', Courier, monospace; /* Tech font is crucial! */
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 2px; /* Wide spacing = Cinematic */
+  font-weight: bold;
+  z-index: 69;
 }
 
 .spaceFact {
