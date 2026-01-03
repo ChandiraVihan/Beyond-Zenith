@@ -63,9 +63,36 @@ const [fact, setFact] = useState(() => {
     return  (
     <>
     <div className="Poster">
-    <div className="Cardtitle">
-    <span>Now Showing</span>
-    </div>
+  <div className="ribbon-container">
+  {/* The SVG acts as the background and the border animation */}
+  <svg 
+    className="ribbon-svg" 
+    viewBox="0 0 300 100" 
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      {/* Define the gradient for the glowing line */}
+      <linearGradient id="comet-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#0055ff" stopOpacity="0" />
+        <stop offset="100%" stopColor="#00D9FF" stopOpacity="1" />
+      </linearGradient>
+      
+      {/* Your exact path definition */}
+      <path id="ribbon-path" d="M 0 50 A 50 50 0 0 1 50 0 L 300 0 C 275 0 275 50 250 50 L 50 50 A 50 50 0 0 0 0 100 Z" />
+    </defs>
+
+    {/* Layer 1: The Glass Background */}
+    <use href="#ribbon-path" className="ribbon-bg" />
+
+    {/* Layer 2: The Moving Border (The Comet) */}
+    <use href="#ribbon-path" className="ribbon-border" />
+  </svg>
+
+  {/* The Text content sits on top */}
+  <div className="ribbon-content">
+    Now Showing
+  </div>
+</div>
     <div className="card"
     style={{
           backgroundImage: `url(${featured.url})`,
