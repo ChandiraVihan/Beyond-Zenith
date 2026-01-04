@@ -22,6 +22,8 @@ function header(){
         textShadow: '0 0 10px #00D9FF' 
     };
 
+    const IsloggedIn = true
+
     return (
         <>
         <header>
@@ -39,7 +41,7 @@ function header(){
             </span>
             </div>
             <div className="btn-container">
-            <button className="logButton" onClick={handleClick}>LOGIN <ChevronRight size={20} /></button>
+            {IsloggedIn ? <button className="logButton" onClick={handleClick}>LOGIN <ChevronRight size={20} /></button> : <button>Avatar</button>}
             </div>
             </nav>
         </header>
