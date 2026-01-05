@@ -19,6 +19,26 @@ function App() {
       <Home />
       </>
       ),
+    },
+
+    {
+      path: '/login',
+      element: (
+        <>
+      <Background />
+      <Header />
+      </>
+      ),
+    },
+
+     {
+      path: '/register',
+      element: (
+        <>
+      <Background />
+      <Header />
+      </>
+      ),
     }
   ]
   )
