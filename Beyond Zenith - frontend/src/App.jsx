@@ -1,3 +1,4 @@
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
 import './App.css'
 import Header from './Header.jsx'
 import Portal from './Portal.jsx'
@@ -8,13 +9,28 @@ function App() {
 
   const portalOn = false
 
-  return (
-    <>
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: (
+        <>
       <Background />
       <Header />
       <Home />
-     {portalOn && <Portal />}
-    </>
+      </>
+      ),
+    }
+  ]
+  )
+
+  return (
+    // <>
+    //   <Background />
+    //   <Header />
+    //   <Home />
+    //  {portalOn && <Portal />}
+    // </>
+     <RouterProvider router={router} />
   )
 }
 
