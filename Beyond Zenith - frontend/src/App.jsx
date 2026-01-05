@@ -39,6 +39,16 @@ function App() {
       <Header />
       </>
       ),
+    },
+
+     {
+      path: '/profile',
+      element: (
+        <>
+      <Background />
+      <Header />
+      </>
+      ),
     }
   ]
   )
