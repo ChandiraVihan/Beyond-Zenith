@@ -140,3 +140,20 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 SITE_ID = 1
+
+# Since you mentioned Gmail login earlier, you likely want users to login with Email:
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False # Optional: makes username unnecessary
+ACCOUNT_EMAIL_VERIFICATION = 'none' # Set to 'mandatory' later when you have a real email server
+
+# This tells Django to use the console to "send" emails for now (so it doesn't crash)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by email
+    'allauth.account.auth_backends.AuthenticationBackend',
+]

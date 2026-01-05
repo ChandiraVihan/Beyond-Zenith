@@ -1,9 +1,12 @@
 # Auth-related endpoints
 # urls.py
-from django.urls import path
+from django.urls import path,include
 from rest_framework.authtoken import views
 
 urlpatterns = [
     # ... other url patterns
-    path('api-token-auth/', views.obtain_auth_token, name='api_token_auth'),
+    path('api/auth/', include('dj_rest_auth.urls')),
+
+
+    path('api/auth/registration/', include('dj_rest_auth.registration.urls')),
 ]
