@@ -4,6 +4,8 @@ import Header from './Header.jsx'
 import Portal from './Portal.jsx'
 import Background from './Background.jsx'
 import Home from './Home.jsx'
+import Login from './Login.jsx'
+import Register from './Register.jsx'
 
 function App() {
 
@@ -27,6 +29,7 @@ function App() {
         <>
       <Background />
       <Header />
+      <Login />
       </>
       ),
     },
@@ -37,6 +40,7 @@ function App() {
         <>
       <Background />
       <Header />
+      <Register />
       </>
       ),
     },
