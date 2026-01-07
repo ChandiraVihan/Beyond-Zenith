@@ -1,17 +1,4 @@
 // const SPACE_KEYWORDS = [
-//   "space",
-//   "planet",
-//   "star",
-//   "galaxy",
-//   "astronomy",
-//   "cosmic",
-//   "orbit",
-//   "asteroid",
-//   "nebula",
-//   "black hole",
-//   "universe",
-//   "moon",
-//   "solar",
 // ];
 
 // export async function fetchSpaceText(maxRetries = 5) {
