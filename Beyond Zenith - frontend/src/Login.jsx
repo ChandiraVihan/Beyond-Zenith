@@ -1,4 +1,4 @@
-
+import './login.css'
 
 const login = async (email, password) => {
     try{
@@ -30,7 +30,11 @@ const login = async (email, password) => {
 function Login(){
 
   return (
-    <h1>Login</h1>
+    <main className="login-container">
+      <div className="login-card">
+        <h1>Login</h1>
+      </div>
+    </main>
   )
 }
 
