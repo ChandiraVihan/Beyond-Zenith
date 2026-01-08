@@ -7,12 +7,18 @@
 
 .login-card {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    background-color:navy;
     height: 500px;
     width: 400px;
     border-radius: 25px;
     background-color: transparent;
     backdrop-filter: blur(25px);
     color:aliceblue;
+}
+
+.login-box{
+    display:flex;
+    
 }

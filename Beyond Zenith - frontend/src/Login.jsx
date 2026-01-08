@@ -33,6 +33,18 @@ function Login(){
     <main className="login-container">
       <div className="login-card">
         <h1>Login</h1>
+        <div className="login-box">
+        <form action="#">
+          <div>
+          <input type="email" required></input>
+          <label>Email</label>
+          </div>
+          <div>
+          <input type="password" required></input>
+          <label>Password</label>
+          </div>
+          </form>
+        </div>
       </div>
     </main>
   )
