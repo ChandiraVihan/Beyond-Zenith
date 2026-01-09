@@ -7,7 +7,7 @@
 
 .register-card {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     height: 450px;
     width: 800px;
     border-radius: 20px;
@@ -16,4 +16,20 @@
     color:aliceblue;
     border: 2px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.form-wrapper {
+    position: relative;
+    flex-direction: column;
+}
+
+.input-group-reg{
+    position: relative;
+    padding: 10px;
+    margin-bottom: 20px;
 }
