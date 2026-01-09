@@ -36,12 +36,27 @@ function Login(){
         <div className="login-box">
         <form action="#">
           <div>
+            <span className="input-icon">
+              <ion-icon name="mail"></ion-icon>
+            </span>
           <input type="email" required></input>
           <label>Email</label>
           </div>
           <div>
+            <span className="pass-icon">
+              <ion-icon name="lock"></ion-icon>
+            </span>
           <input type="password" required></input>
           <label>Password</label>
+          </div>
+          <div>
+            <a href="#">Forgot Password?</a>
+          </div>
+          <div>
+            <button type="submit">Login</button>
+          </div>
+          <div className="login-register">
+            <p>Don't have an account? <a href="#" className="register-link">Register</a></p>
           </div>
           </form>
         </div>

@@ -1,12 +1,16 @@
 import './Header.css'
 import logo from './assets/logo1.png'
 import { Rocket, Satellite, Globe, Radio, ChevronRight, Play, Info } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 
 function header(){
 
+     const navigate = useNavigate();
+
+
     function handleClick(){
-        console.log("Login Clicked")
+        navigate('/login');
     }
 
     function handleLogo(){
@@ -22,7 +26,7 @@ function header(){
         textShadow: '0 0 10px #00D9FF' 
     };
 
-    const IsloggedIn = true
+    const IsloggedIn = false
 
     return (
         <>
