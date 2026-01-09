@@ -100,6 +100,17 @@
     margin-bottom: 20px;
 }
 
+.forgot-password a {
+    color:rgb(14, 219, 31);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+    color: blueviolet;
+}
+
 .login-button{
     text-align: center;
     margin-bottom: 20px;
@@ -127,4 +138,16 @@
 
 .login-register {
     text-align: center;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color:rgb(14, 219, 31);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+    color: blueviolet;
 }
