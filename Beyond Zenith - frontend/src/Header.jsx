@@ -26,7 +26,7 @@ function header(){
         textShadow: '0 0 10px #00D9FF' 
     };
 
-    const IsloggedIn = false
+    const IsloggedIn = true
 
     return (
         <>

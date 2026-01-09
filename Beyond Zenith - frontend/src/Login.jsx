@@ -35,28 +35,30 @@ function Login(){
         <h1>Login</h1>
         <div className="login-box">
         <form action="#">
-          <div>
-            <span className="input-icon">
+          <div className="input-group">
+          <div className="input-group-email">
+            <span className="mail-icon">
               <ion-icon name="mail"></ion-icon>
             </span>
           <input type="email" required></input>
-          <label>Email</label>
+          <label>Email :</label>
           </div>
-          <div>
+          <div className="input-group-password">
             <span className="pass-icon">
               <ion-icon name="lock"></ion-icon>
             </span>
           <input type="password" required></input>
-          <label>Password</label>
+          <label>Password :</label>
           </div>
-          <div>
+          </div>
+          <div className="forgot-password">
             <a href="#">Forgot Password?</a>
           </div>
-          <div>
+          <div className="login-button">
             <button type="submit">Login</button>
           </div>
           <div className="login-register">
-            <p>Don't have an account? <a href="#" className="register-link">Register</a></p>
+            <p>Don't have an account? <a href="/register" className="register-link">Register</a></p>
           </div>
           </form>
         </div>
