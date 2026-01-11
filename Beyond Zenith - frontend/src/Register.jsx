@@ -34,16 +34,14 @@ function Register(){
           <label>Email :</label>
               </div>
               <div className="reg-confirm-pass">
-               <span className="reg-passconf-icon">
+               <span className="reg-pass-icon">
               <ion-icon name="checkmark-circle"></ion-icon>
             </span>
           <input type="password" required></input>
           <label>Confirm Password :</label>
           </div>
           </div>
-          <div className="register-button">
-            <button type="submit">Register</button>
-          </div>
+            <button className="register-button" type="submit">Register</button>
           <div className="register-login">
             <p>Already have an account? <a href="/login" className="login-link">Login</a></p>
           </div>
