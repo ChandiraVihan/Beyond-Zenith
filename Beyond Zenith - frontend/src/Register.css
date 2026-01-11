@@ -20,7 +20,7 @@
 
 h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 100%;
 }
 
@@ -87,8 +87,6 @@ h1 {
     font-size: 1.2rem;
 }
 
-
-
 .reg-email {
     padding: 10px;
     position: relative;
@@ -96,6 +94,34 @@ h1 {
     height: 50px;
     margin-bottom: 20px;
     border-bottom: 2px solid aliceblue;
+}
+
+.reg-email input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: aliceblue;
+    font-size: 1rem;
+    padding-left: 10px;
+    padding-right: 35px;
+}
+
+.reg-email label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: aliceblue;
+    pointer-events: none;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.reg-email input:focus~label,
+.reg-email input:valid~label {
+    top: -1px;
 }
 
 .reg-pass {
@@ -107,6 +133,34 @@ h1 {
     border-bottom: 2px solid aliceblue;
 }
 
+.reg-pass input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: aliceblue;
+    font-size: 1rem;
+    padding-left: 10px;
+    padding-right: 35px;
+}
+
+.reg-pass label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: aliceblue;
+    pointer-events: none;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.reg-pass input:focus~label,
+.reg-pass input:valid~label {
+    top: -1px;
+}
+
 .reg-confirm-pass {
     padding: 10px;
     position: relative;
@@ -114,6 +168,43 @@ h1 {
     height: 50px;
     margin-bottom: 20px;
     border-bottom: 2px solid aliceblue;
+}
+
+.reg-confirm-pass input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: aliceblue;
+    font-size: 1rem;
+    padding-left: 10px;
+    padding-right: 35px;
+}
+
+.reg-confirm-pass label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: aliceblue;
+    pointer-events: none;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.reg-confirm-pass input:focus~label,
+.reg-confirm-pass input:valid~label {
+    top: -1px;
+}
+
+.reg-pass-icon {
+    position: absolute;
+    top: 50%;
+    left: 320px;
+    transform: translateY(-50%);
+    color: aliceblue;
+    font-size: 1.2rem;
 }
 
 .reg-grid {
@@ -128,7 +219,7 @@ h1 {
 .register-button {
     display: flex;
     justify-content: center;
-    margin-top: 2px;
+    margin-top: 0;
     padding: 10px;
     border: none;
     border-radius: 16px;
@@ -138,10 +229,26 @@ h1 {
     font-weight: bold;
     cursor: pointer;
     width: 52%;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
 }
 
 .register-button:hover {
     background-color: black;
     color: aliceblue;
+}
+
+register-login {
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register-login p a {
+    color:rgb(14, 219, 31);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-login p a:hover {
+    text-decoration: underline;
+    color: blueviolet;
 }
