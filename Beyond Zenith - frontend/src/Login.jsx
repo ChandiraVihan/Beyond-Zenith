@@ -2,7 +2,7 @@ import './login.css'
 
 const login = async (email, password) => {
     try{
-        const response = await fetch('BACKEND_URL/accounts/api/auth',
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/`,
             {
                 method: 'POST',
                 headers: {
