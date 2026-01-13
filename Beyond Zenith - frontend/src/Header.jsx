@@ -14,7 +14,7 @@ function header(){
     }
 
     function handleLogo(){
-        console.log("clicked")
+        navigate('/');
     }
 
     const asciiStyle = {
@@ -33,7 +33,7 @@ function header(){
         <header>
             <nav>
             <div className="title-logo">
-            <img className="logo" src={logo}/>
+            <img className="logo" src={logo} onClick={handleLogo}/>
             <span className="title" onClick={handleLogo} style={asciiStyle}>
              BEYOND <br></br>
              ZENITH

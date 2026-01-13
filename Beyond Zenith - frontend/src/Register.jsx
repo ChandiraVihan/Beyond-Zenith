@@ -43,6 +43,7 @@ function Register(){
       const data = await response.json();
 
       if (response.ok) {
+        localStorage.setItem('token', data.key); // Save token after registration
         console.log("Registration successful!");
         // Optionally, redirect to login page
         // window.location.href = '/login';

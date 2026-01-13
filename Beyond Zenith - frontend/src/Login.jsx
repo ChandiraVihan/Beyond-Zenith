@@ -1,53 +1,72 @@
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import './login.css'
 
-const login = async (email, password) => {
-    try{
-        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/`,
-            {
-                method: 'POST',
-                headers: {
-                     'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, password }),
-            }
-        );
+function Login(){
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    email: '',
+    password: ''
+});
+
+const handleChange = (event) => {
+    setFormData({
+        ...formData,
+        [event.target.name]: event.target.value,
+    });
+}
+
+const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+        const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/accounts/api/auth/login/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                email: formData.email,
+                password: formData.password,
+            }),
+        });
 
         const data = await response.json();
 
-        if(response.ok) {
-            
- // Save the token to use for future requests
-      localStorage.setItem('token', data.token);
-      console.log("Login successful! Token saved.");
-    } else {
-      console.error("Login failed:", data);
-    }
-  } catch (error) {
-    console.error("Error:", error);
-  }      
-};
+        if (response.ok) {
+            localStorage.setItem('token', data.key); 
+            console.log("Login successful!");
+            navigate('/');
 
-function Login(){
+        } else {
+            console.error("Login failed:", data);
+        }
+    } catch (error) {
+        console.error("Error:", error);
+    }
+  }
+
 
   return (
     <main className="login-container">
       <div className="login-card">
         <h1>Login</h1>
         <div className="login-box">
-        <form action="#">
+        <form onSubmit={handleSubmit}>
           <div className="input-group">
           <div className="input-group-email">
             <span className="mail-icon">
               <ion-icon name="mail"></ion-icon>
             </span>
-          <input type="email" required></input>
+          <input type="email" name="email" required value={formData.email} onChange={handleChange}/>
           <label>Email :</label>
           </div>
           <div className="input-group-password">
             <span className="pass-icon">
               <ion-icon name="lock"></ion-icon>
             </span>
-          <input type="password" required></input>
+          <input type="password" name="password" required value={formData.password} onChange={handleChange}/>
           <label>Password :</label>
           </div>
           </div>
@@ -66,5 +85,6 @@ function Login(){
     </main>
   )
 }
+
 
 export default Login
