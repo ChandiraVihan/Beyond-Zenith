@@ -161,5 +161,5 @@ AUTHENTICATION_BACKENDS = [
 # Add this anywhere in settings.py (usually near REST_FRAMEWORK)
 REST_AUTH = {
     'SESSION_LOGIN': False,
-    'USE_JWT': False, # Set to True only if you are using SimpleJWT
+    'USE_JWT': False, 
 }
