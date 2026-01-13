@@ -12,13 +12,23 @@ function header(){
      const [isLoggedIn, setIsLoggedIn] = useState(false);
 
      useEffect(() => {
+        const handleStorageChange = () => {
+            const token = localStorage.getItem('token');
+            if (token) {
+                setIsLoggedIn(true);
+            } else {
+                setIsLoggedIn(false);
+            }
+        };
 
-        const token = localStorage.getItem('token');
-        if (token) {
-            setIsLoggedIn(true);
-        } else {
-            setIsLoggedIn(false);
-        }
+        window.addEventListener('storage', handleStorageChange);
+
+        // Initial check
+        handleStorageChange();
+
+        return () => {
+            window.removeEventListener('storage', handleStorageChange);
+        };
     }, []);
 
     function handleClick(){
@@ -27,6 +37,10 @@ function header(){
 
     function handleLogo(){
         navigate('/');
+    }
+
+    function  handleClickAvatar(){
+        navigate('/profile');
     }
 
     const asciiStyle = {
@@ -56,7 +70,7 @@ function header(){
             </span>
             </div>
             <div className="btn-container">
-            {isLoggedIn ? <button>Avatar</button> : <button className="logButton" onClick={handleClick}>LOGIN <ChevronRight size={20} /></button>}
+            {isLoggedIn ? <div className="avatar" onClick={handleClickAvatar}></div> : <button className="logButton" onClick={handleClick}>LOGIN <ChevronRight size={20} /></button>}
             </div>
             </nav>
         </header>

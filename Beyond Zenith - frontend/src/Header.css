@@ -114,3 +114,16 @@ header > nav {
     gap: 30px;
     align-items: end;
 }
+
+.avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #00D9FF;
+    box-shadow: 0 0 10px #00D9FF, inset 0 0 5px #00D9FF;
+}
+
+.avatar:hover {
+    cursor: pointer;
+    scale:1.1;
+}
