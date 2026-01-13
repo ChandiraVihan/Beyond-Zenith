@@ -64,9 +64,13 @@ function header(){
              ZENITH
             </span>
             </div>
-            <div>            <span className="tags">
-               <a>Mission</a> 
-               <a>Vision</a>
+            <div>
+             <span className="tags">
+               <a>🎂 Cosmic Timeline Explorer</a> 
+               <a>🖼️ APOD Gallery </a>
+               <a>📡 Live Space Dashboard</a>
+               <a>🌌 NEO Tracker</a>
+               <a>🔴 Mars Rover Gallery</a>
             </span>
             </div>
             <div className="btn-container">

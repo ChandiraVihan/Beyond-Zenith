@@ -119,7 +119,7 @@ header > nav {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-color: #00D9FF;
+    background-color: transparent;
     box-shadow: 0 0 10px #00D9FF, inset 0 0 5px #00D9FF;
 }
 
