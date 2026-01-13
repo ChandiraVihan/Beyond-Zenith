@@ -52,17 +52,50 @@ function header(){
         textShadow: '0 0 10px #00D9FF' 
     };
 
+    const BeyondZenithLogo = ({ color = "#00f2ff" }) => {
+  return (
+    <svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+      <text 
+        x="0" 
+        y="20" 
+        fill={color} 
+        fontFamily="monospace" 
+        fontSize="12px" 
+        style={{ whiteSpace: 'pre' }}
+      >
+        {`
+██████╗ ███████╗██╗   ██╗ ██████╗ ███╗   ██╗██████╗ 
+██╔══██╗██╔════╝╚██╗ ██╔╝██╔═══██╗████╗  ██║██╔══██╗
+██████╔╝█████╗   ╚████╔╝ ██║   ██║██╔██╗ ██║██║  ██║
+██╔══██╗██╔══╝    ╚██╔╝  ██║   ██║██║╚██╗██║██║  ██║
+██████╔╝███████╗   ██║   ╚██████╔╝██║ ╚████║██████╔╝
+╚═════╝ ╚══════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═══╝╚═════╝ 
+                                                    
+███████╗███████╗███╗   ██╗██╗████████╗██╗  ██╗      
+╚══███╔╝██╔════╝████╗  ██║██║╚══██╔══╝██║  ██║      
+  ███╔╝ █████╗  ██╔██╗ ██║██║   ██║   ███████║      
+ ███╔╝  ██╔══╝  ██║╚██╗██║██║   ██║   ██╔══██║      
+███████╗███████╗██║ ╚████║██║   ██║   ██║  ██║      
+╚══════╝╚══════╝╚═╝  ╚═══╝╚═╝   ╚═╝   ╚═╝  ╚═╝
+
+        `}
+      </text>
+    </svg>
+  );
+};
+
 
     return (
         <>
         <header>
             <nav>
             <div className="title-logo">
-            <img className="logo" src={logo} onClick={handleLogo}/>
+            {/* <img className="logo" src={logo} onClick={handleLogo}/>
             <span className="title" onClick={handleLogo} style={asciiStyle}>
              BEYOND <br></br>
              ZENITH
-            </span>
+            </span> */}                             
+
             </div>
             <div>
              <span className="tags">
