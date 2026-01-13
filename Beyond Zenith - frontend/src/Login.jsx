@@ -35,7 +35,8 @@ const handleSubmit = async (event) => {
         const data = await response.json();
 
         if (response.ok) {
-            localStorage.setItem('token', data.key); 
+            localStorage.setItem('token', data.key);
+            window.dispatchEvent(new Event('storage')); // trigger a re-rendor when logged in again
             console.log("Login successful!");
             navigate('/');
 

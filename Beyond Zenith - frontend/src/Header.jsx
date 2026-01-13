@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import './Header.css'
 import logo from './assets/logo1.png'
 import { Rocket, Satellite, Globe, Radio, ChevronRight, Play, Info } from 'lucide-react';
@@ -8,6 +9,17 @@ function header(){
 
      const navigate = useNavigate();
 
+     const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+     useEffect(() => {
+
+        const token = localStorage.getItem('token');
+        if (token) {
+            setIsLoggedIn(true);
+        } else {
+            setIsLoggedIn(false);
+        }
+    }, []);
 
     function handleClick(){
         navigate('/login');
@@ -26,7 +38,6 @@ function header(){
         textShadow: '0 0 10px #00D9FF' 
     };
 
-    const IsloggedIn = true
 
     return (
         <>
@@ -45,7 +56,7 @@ function header(){
             </span>
             </div>
             <div className="btn-container">
-            {IsloggedIn ? <button className="logButton" onClick={handleClick}>LOGIN <ChevronRight size={20} /></button> : <button>Avatar</button>}
+            {isLoggedIn ? <button>Avatar</button> : <button className="logButton" onClick={handleClick}>LOGIN <ChevronRight size={20} /></button>}
             </div>
             </nav>
         </header>
@@ -53,4 +64,4 @@ function header(){
                 )
 }
 
-export default header;
+export default header
