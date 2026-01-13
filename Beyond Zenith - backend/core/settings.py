@@ -157,3 +157,9 @@ AUTHENTICATION_BACKENDS = [
     # `allauth` specific authentication methods, such as login by email
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
+
+# Add this anywhere in settings.py (usually near REST_FRAMEWORK)
+REST_AUTH = {
+    'SESSION_LOGIN': False,
+    'USE_JWT': False, # Set to True only if you are using SimpleJWT
+}
