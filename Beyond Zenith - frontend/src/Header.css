@@ -43,16 +43,15 @@ header > nav {
     width: 100%;
 }
 
-.title {
-    font-size: 24px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
+
 
 .title-logo {
-    display:flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    height: 150px;
+    cursor: pointer;
+    width: 180px;
 }
 
 @property --angle {
@@ -108,12 +107,12 @@ header > nav {
   to { --angle: 360deg; }
 }
 
-.tags {
+/* .tags {
     display: flex;
     font-size: 20px;
     gap: 30px;
     align-items: end;
-}
+} */
 
 .avatar {
     height: 50px;
@@ -126,4 +125,28 @@ header > nav {
 .avatar:hover {
     cursor: pointer;
     scale:1.1;
+}
+
+.beyond-logo-svg {
+    color: #00D9FF; /* Your specific cyan color */
+    height: 100px; /* Increased from 80px to match your header's 120px height */
+    width: auto;
+    filter: drop-shadow(0 0 5px rgba(0, 217, 255, 0.8));
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.beyond-logo-svg:hover {
+    color: #ffffff;
+    filter: drop-shadow(0 0 12px #00D9FF);
+    transform: scale(1.02);
+}
+
+/* Fix for the navigation links to ensure they don't overlap the logo */
+.tags {
+    display: flex;
+    font-size: 14px; /* Reduced from 20px to prevent header crowding */
+    gap: 20px;
+    align-items: center;
+    white-space: nowrap;
 }

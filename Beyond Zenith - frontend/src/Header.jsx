@@ -3,6 +3,7 @@ import './Header.css'
 import logo from './assets/logo1.png'
 import { Rocket, Satellite, Globe, Radio, ChevronRight, Play, Info } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import titleLogo from './assets/title.svg'
 
 
 function header(){
@@ -52,38 +53,50 @@ function header(){
         textShadow: '0 0 10px #00D9FF' 
     };
 
-    const BeyondZenithLogo = ({ color = "#00f2ff" }) => {
+const BeyondLogo = ({ onClick }) => {
   return (
-    <svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+    <svg 
+      viewBox="0 0 450 140" // Tightened box to prevent "tiny dash" effect
+      width="400" 
+      height="100" 
+      xmlns="http://www.w3.org/2000/svg"
+      className="beyond-logo-svg"
+      onClick={onClick}
+      style={{ cursor: 'pointer' }}
+    >
       <text 
         x="0" 
-        y="20" 
-        fill={color} 
-        fontFamily="monospace" 
-        fontSize="12px" 
-        style={{ whiteSpace: 'pre' }}
+        y="40" // Shifted down so it's not cut off at the top
+        fill="currentColor" 
+        fontFamily="'Courier New', Courier, monospace" 
+        fontSize="10px" 
+        style={{ whiteSpace: 'pre', lineHieght: '1.1' }}
       >
         {`
-██████╗ ███████╗██╗   ██╗ ██████╗ ███╗   ██╗██████╗ 
-██╔══██╗██╔════╝╚██╗ ██╔╝██╔═══██╗████╗  ██║██╔══██╗
-██████╔╝█████╗   ╚████╔╝ ██║   ██║██╔██╗ ██║██║  ██║
-██╔══██╗██╔══╝    ╚██╔╝  ██║   ██║██║╚██╗██║██║  ██║
-██████╔╝███████╗   ██║   ╚██████╔╝██║ ╚████║██████╔╝
-╚═════╝ ╚══════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═══╝╚═════╝ 
-                                                    
-███████╗███████╗███╗   ██╗██╗████████╗██╗  ██╗      
-╚══███╔╝██╔════╝████╗  ██║██║╚══██╔══╝██║  ██║      
-  ███╔╝ █████╗  ██╔██╗ ██║██║   ██║   ███████║      
- ███╔╝  ██╔══╝  ██║╚██╗██║██║   ██║   ██╔══██║      
-███████╗███████╗██║ ╚████║██║   ██║   ██║  ██║      
-╚══════╝╚══════╝╚═╝  ╚═══╝╚═╝   ╚═╝   ╚═╝  ╚═╝
-
+ ██████╗ ███████╗██╗   ██╗ ██████╗ ███╗   ██╗██████╗ 
+ ██╔══██╗██╔════╝╚██╗ ██╔╝██╔═══██╗████╗  ██║██╔══██╗
+ ██████╔╝█████╗   ╚████╔╝ ██║   ██║██╔██╗ ██║██║  ██║
+ ██╔══██╗██╔══╝    ╚██╔╝  ██║   ██║██║╚██╗██║██║  ██║
+ ██████╔╝███████╗   ██║   ╚██████╔╝██║ ╚████║██████╔╝
+ ╚═════╝ ╚══════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═══╝╚═════╝ 
+                                                     
+ ███████╗███████╗███╗   ██╗██╗████████╗██╗  ██╗      
+ ╚══███╔╝██╔════╝████╗  ██║██║╚══██╔══╝██║  ██║      
+   ███╔╝ █████╗  ██╔██╗ ██║██║   ██║   ███████║      
+  ███╔╝  ██╔══╝  ██║╚██╗██║██║   ██║   ██╔══██║      
+ ███████╗███████╗██║ ╚████║██║   ██║   ██║  ██║      
+ ╚══════╝╚══════╝╚═╝  ╚═══╝╚═╝   ╚═╝   ╚═╝  ╚═╝
         `}
       </text>
     </svg>
   );
 };
 
+const TitleLogo = ({ onClick }) => {
+    return (   
+        <img src={titleLogo} alt="Beyond Zenith Logo" className="title-logo-image" onClick={onClick} style={{ cursor: 'pointer' }}/>
+    );
+}
 
     return (
         <>
@@ -95,7 +108,7 @@ function header(){
              BEYOND <br></br>
              ZENITH
             </span> */}                             
-
+            <TitleLogo onClick={handleLogo}/>
             </div>
             <div>
              <span className="tags">
