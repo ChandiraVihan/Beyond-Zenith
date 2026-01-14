@@ -44,6 +44,14 @@ function header(){
         navigate('/profile');
     }
 
+    function  handleTag1(){
+        navigate('/timeline');
+    }
+
+    function  handleTag2(){
+        navigate('/apod');
+    }
+
 
 const TitleLogo = ({ onClick }) => {
     return (   
@@ -60,8 +68,8 @@ const TitleLogo = ({ onClick }) => {
             </div>
             <div>
              <span className="tags">
-               <a className="tag1">🎂 Cosmic Timeline Explorer</a> 
-               <a>🖼️ APOD Gallery </a>
+               <a className="tag1" onClick={handleTag1}>🎂 Cosmic Timeline Explorer</a> 
+               <a className="tag2" onClick={handleTag2}>🖼️ APOD Gallery </a>
                <a>📡 Live Space Dashboard</a>
                <a>🌌 NEO Tracker</a>
                <a>🔴 Mars Rover Gallery</a>

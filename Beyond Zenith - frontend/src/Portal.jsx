@@ -1,5 +1,7 @@
 import React, { useMemo } from 'react'
 import './Portal.css'
+import TimeLineView from './TimeLineView';
+import Apod from './ApodDetails.jsx';
 
 function portal(props) {
 
@@ -23,6 +25,11 @@ function portal(props) {
     }
     return sparkArray;
   },[]);
+
+  
+props = {
+   children: <Apod />
+}
   
   return (
     <div className="portal-container">
@@ -35,6 +42,9 @@ function portal(props) {
         style={spark.style}
         />
       ))}
+    </div>
+    <div className="portal-content">
+      {props.children}
     </div>
     </div>
   );

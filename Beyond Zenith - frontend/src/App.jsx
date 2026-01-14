@@ -6,10 +6,12 @@ import Background from './Background.jsx'
 import Home from './Home.jsx'
 import Login from './Login.jsx'
 import Register from './Register.jsx'
+import TimeLineView from './TimeLineView.jsx'
+import Apod from './ApodDetails.jsx'
 
 function App() {
 
-  const portalOn = false
+  const portalOn = true
 
   const router = createBrowserRouter([
     {
@@ -53,17 +55,55 @@ function App() {
       <Header />
       </>
       ),
+    },
+
+     {
+      path: '/portal',
+      element: (
+        <>
+      <Background />
+      <Header />
+     {portalOn && <Portal />}
+      </>
+      ),
+    },
+
+    {
+      path: '/timeline',
+      element: (
+        <>
+      <Background />
+      <Header />
+      <TimeLineView />
+      </>
+      ),
+    },
+
+    {
+      path: '/apod',
+      element: (
+        <>
+      <Background />
+      <Header />
+      <Apod />
+      </>
+      ),
+    },
+
+    {
+      path: '/live',
+      element: (
+        <>
+      <Background />
+      <Header />
+      </>
+      ),
     }
   ]
   )
 
   return (
-    // <>
-    //   <Background />
-    //   <Header />
-    //   <Home />
-    //  {portalOn && <Portal />}
-    // </>
+    
      <RouterProvider router={router} />
   )
 }

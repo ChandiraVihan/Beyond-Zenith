@@ -139,5 +139,11 @@ header > nav {
 .tag1:hover {
     cursor: pointer;
     color: #00D9FF;
-    text-shadow: 0 0 10px #00D9FF;
+    scale: 1.05;
+}
+
+.tag2:hover {
+    cursor: pointer;
+    color: #00D9FF;
+    scale: 1.05;
 }
