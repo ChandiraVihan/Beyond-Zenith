@@ -26,14 +26,14 @@ header > span {
 }
 
 
-.logo{
+/* .logo{
     height: 90px;
     width: 90px;
     border: 2px solid #00D9FF; 
     box-shadow: 0 0 10px #00D9FF, inset 0 0 5px #00D9FF;
     border-radius: 12px; 
     padding:0;
-}
+} */
 
 header > nav {
     display: flex;
@@ -127,26 +127,17 @@ header > nav {
     scale:1.1;
 }
 
-.beyond-logo-svg {
-    color: #00D9FF; /* Your specific cyan color */
-    height: 100px; /* Increased from 80px to match your header's 120px height */
-    width: auto;
-    filter: drop-shadow(0 0 5px rgba(0, 217, 255, 0.8));
-    transition: all 0.3s ease;
-    display: block;
-}
 
-.beyond-logo-svg:hover {
-    color: #ffffff;
-    filter: drop-shadow(0 0 12px #00D9FF);
-    transform: scale(1.02);
-}
-
-/* Fix for the navigation links to ensure they don't overlap the logo */
 .tags {
     display: flex;
-    font-size: 14px; /* Reduced from 20px to prevent header crowding */
-    gap: 20px;
+    font-size: 18px; /* Reduced from 20px to prevent header crowding */
+    gap: 35px;
     align-items: center;
     white-space: nowrap;
+}
+
+.tag1:hover {
+    cursor: pointer;
+    color: #00D9FF;
+    text-shadow: 0 0 10px #00D9FF;
 }

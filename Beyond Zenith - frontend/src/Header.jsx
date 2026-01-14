@@ -44,53 +44,6 @@ function header(){
         navigate('/profile');
     }
 
-    const asciiStyle = {
-        fontFamily: '"Bungee Shade", cursive',
-        color: '#00D9FF', // 
-        fontSize: '54px',
-        textAlign: 'center',
-        lineHeight: '1',
-        textShadow: '0 0 10px #00D9FF' 
-    };
-
-const BeyondLogo = ({ onClick }) => {
-  return (
-    <svg 
-      viewBox="0 0 450 140" // Tightened box to prevent "tiny dash" effect
-      width="400" 
-      height="100" 
-      xmlns="http://www.w3.org/2000/svg"
-      className="beyond-logo-svg"
-      onClick={onClick}
-      style={{ cursor: 'pointer' }}
-    >
-      <text 
-        x="0" 
-        y="40" // Shifted down so it's not cut off at the top
-        fill="currentColor" 
-        fontFamily="'Courier New', Courier, monospace" 
-        fontSize="10px" 
-        style={{ whiteSpace: 'pre', lineHieght: '1.1' }}
-      >
-        {`
- ██████╗ ███████╗██╗   ██╗ ██████╗ ███╗   ██╗██████╗ 
- ██╔══██╗██╔════╝╚██╗ ██╔╝██╔═══██╗████╗  ██║██╔══██╗
- ██████╔╝█████╗   ╚████╔╝ ██║   ██║██╔██╗ ██║██║  ██║
- ██╔══██╗██╔══╝    ╚██╔╝  ██║   ██║██║╚██╗██║██║  ██║
- ██████╔╝███████╗   ██║   ╚██████╔╝██║ ╚████║██████╔╝
- ╚═════╝ ╚══════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═══╝╚═════╝ 
-                                                     
- ███████╗███████╗███╗   ██╗██╗████████╗██╗  ██╗      
- ╚══███╔╝██╔════╝████╗  ██║██║╚══██╔══╝██║  ██║      
-   ███╔╝ █████╗  ██╔██╗ ██║██║   ██║   ███████║      
-  ███╔╝  ██╔══╝  ██║╚██╗██║██║   ██║   ██╔══██║      
- ███████╗███████╗██║ ╚████║██║   ██║   ██║  ██║      
- ╚══════╝╚══════╝╚═╝  ╚═══╝╚═╝   ╚═╝   ╚═╝  ╚═╝
-        `}
-      </text>
-    </svg>
-  );
-};
 
 const TitleLogo = ({ onClick }) => {
     return (   
@@ -102,17 +55,12 @@ const TitleLogo = ({ onClick }) => {
         <>
         <header>
             <nav>
-            <div className="title-logo">
-            {/* <img className="logo" src={logo} onClick={handleLogo}/>
-            <span className="title" onClick={handleLogo} style={asciiStyle}>
-             BEYOND <br></br>
-             ZENITH
-            </span> */}                             
+            <div className="title-logo">                             
             <TitleLogo onClick={handleLogo}/>
             </div>
             <div>
              <span className="tags">
-               <a>🎂 Cosmic Timeline Explorer</a> 
+               <a className="tag1">🎂 Cosmic Timeline Explorer</a> 
                <a>🖼️ APOD Gallery </a>
                <a>📡 Live Space Dashboard</a>
                <a>🌌 NEO Tracker</a>
