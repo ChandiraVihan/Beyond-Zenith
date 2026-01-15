@@ -59,16 +59,14 @@ const TitleLogo = ({ onClick }) => {
     );
 }
 
+    const [isPortalVisible, setIsPortalVisible] = useState(false);
+
     function handleMouseEnter(){
-        < Portal />
+        setIsPortalVisible(true);
     }
 
     function handleMouseLeave(){
-        //
-    }
-
-    function hoverTest(){
-        console.log("hovered");
+        setIsPortalVisible(false);
     }
 
     return (
@@ -80,9 +78,10 @@ const TitleLogo = ({ onClick }) => {
             </div>
             <div>
              <span className="tags">
-               <a className="tag1" onClick={handleTag1}
-               onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                🎂 Cosmic Timeline Explorer</a> 
+               <a className="tag1" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleTag1}>
+                🎂 Cosmic Timeline Explorer
+                {isPortalVisible && <Portal />}
+               </a> 
                <a className="tag2" onClick={handleTag2}>🖼️ APOD Gallery </a>
                <a>📡 Live Space Dashboard</a>
                <a>🌌 NEO Tracker</a>
