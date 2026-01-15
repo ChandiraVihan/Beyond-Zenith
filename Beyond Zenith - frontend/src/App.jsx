@@ -11,7 +11,6 @@ import Apod from './ApodDetails.jsx'
 
 function App() {
 
-  const portalOn = true
 
   const router = createBrowserRouter([
     {
@@ -53,17 +52,6 @@ function App() {
         <>
       <Background />
       <Header />
-      </>
-      ),
-    },
-
-     {
-      path: '/portal',
-      element: (
-        <>
-      <Background />
-      <Header />
-     {portalOn && <Portal />}
       </>
       ),
     },
