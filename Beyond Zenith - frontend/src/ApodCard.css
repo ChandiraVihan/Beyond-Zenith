@@ -2,14 +2,20 @@
     background-color: transparent;
     height: 365px;
     width: 360px;
+}
+
+.picture{
+    height: 100%;
+    width: 100%;
     border-radius: 15px;
     border: 2px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    clip-path: path("M 0,0 L 360,0 L 360,325 L 180,325 L 180,365 L 0,365 L 0,0 Z");
 }
 
 .apod-image {
     width: 100%;
     height: 100%;
-    border-radius: 15px;
+   border-radius: 15px;
     object-fit: cover;
 }
