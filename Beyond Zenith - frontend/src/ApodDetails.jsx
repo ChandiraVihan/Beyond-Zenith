@@ -9,10 +9,14 @@ function Apod() {
 
     const testImages = [im1, im2, im3, im4];
 
+    const finalImages = testImages.map((img, index) => (
+        <ApodCard key={index} testImages={img} />
+    ));
+
     return (
         <div className="apod-view">
             <h1>APOD Gallery</h1>  
-            <ApodCard testImages={testImages} /> 
+            {finalImages}  
             </div>
     )
 }
