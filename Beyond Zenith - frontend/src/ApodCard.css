@@ -5,5 +5,11 @@
     border-radius: 15px;
     border: 2px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-    clip-path: path();
+}
+
+.apod-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
 }
