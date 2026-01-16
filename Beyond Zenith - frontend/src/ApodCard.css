@@ -1,0 +1,9 @@
+.pic-container {
+    background-color: transparent;
+    height: 365px;
+    width: 360px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    clip-path: path();
+}
