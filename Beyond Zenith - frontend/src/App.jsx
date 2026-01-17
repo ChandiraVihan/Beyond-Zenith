@@ -8,7 +8,6 @@ import Login from './Login.jsx'
 import Register from './Register.jsx'
 import TimeLineView from './TimeLineView.jsx'
 import Apod from './ApodDetails.jsx'
-import ScrollBar from './CustomScrollBar.jsx'
 import FakeScroll from './FakeScroll.jsx'
 
 function App() {

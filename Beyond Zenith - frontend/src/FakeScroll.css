@@ -19,7 +19,7 @@
 .fake-scrollbar {
   position: fixed;
   top: 0;
-  right: 8px;
+  right: 2px;
   height: 100vh;
   width: 6px;
   opacity: 0;
