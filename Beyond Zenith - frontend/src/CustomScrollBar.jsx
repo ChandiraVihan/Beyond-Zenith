@@ -1,37 +1,30 @@
 import { useEffect, useRef, useState } from "react";
 import "./CustomScrollBar.css";
 
-export default function ScrollBar({ children }) {
-  const scrollRef = useRef(null);
+export default function CustomScrollBar({ children }) {
+  const ref = useRef(null);
   const [scrolling, setScrolling] = useState(false);
-  const timeoutRef = useRef(null);
+  let timeout;
 
   useEffect(() => {
-    const el = scrollRef.current;
+    const el = ref.current;
     if (!el) return;
 
     const onScroll = () => {
       setScrolling(true);
-      clearTimeout(timeoutRef.current);
-
-      timeoutRef.current = setTimeout(() => {
-        setScrolling(false);
-      }, 800); // fade-out delay
+      clearTimeout(timeout);
+      timeout = setTimeout(() => setScrolling(false), 600);
     };
 
     el.addEventListener("scroll", onScroll);
-
-    return () => {
-      el.removeEventListener("scroll", onScroll);
-      clearTimeout(timeoutRef.current);
-    };
+    return () => el.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <div className="space-scroll-root">
+    <div className="scroll-root">
       <div
-        ref={scrollRef}
-        className={`space-scroll ${scrolling ? "scrolling" : ""}`}
+        ref={ref}
+        className={`scroll-container ${scrolling ? "scrolling" : ""}`}
       >
         {children}
       </div>
