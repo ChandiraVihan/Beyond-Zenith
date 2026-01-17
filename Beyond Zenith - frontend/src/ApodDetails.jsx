@@ -12,15 +12,15 @@ import im9 from './assets/im9.jpg'
 function Apod() {
 
     const testImages = [im1, im2, im4, im5, im6, im7, im8, im9];
+    const title = "Astronomy Picture of the Day";
 
     const finalImages = testImages.map((img, index) => (
-        <ApodCard key={index} testImages={img} />
+        <ApodCard key={index} testImages={img} title={title}/>
     ));
 
     return (
         <div className="apod-view">
             {finalImages}  
-            
             </div>
     )
 }

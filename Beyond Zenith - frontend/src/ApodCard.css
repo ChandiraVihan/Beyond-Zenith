@@ -16,3 +16,31 @@
     pointer-events: none;
     cursor: pointer;
 }
+
+
+.apod-card {
+    position: relative;
+    width: 360px;
+}
+
+
+.card-title-container {
+    position: absolute;
+    top: 325px; 
+    left: 210px; 
+    width: 150px; 
+    height: 40px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d1ff00;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    cursor: pointer;
+}

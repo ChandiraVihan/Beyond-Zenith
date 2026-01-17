@@ -5,6 +5,7 @@ function ApodCard(props) {
   const pathData = "M 20,0 L 340,0 A 20,20 0 0 1 360,20 L 360,310 A 15,15 0 0 1 345,325 L 210,325 C 190,325 190,365 160,365 L 20,365 A 20,20 0 0 1 0,345 L 0,20 A 20,20 0 0 1 20,0 Z";
 
   return (
+    <div className="apod-card">
     <div className="pic-container">
       <svg 
         className="svg-card"
@@ -33,7 +34,10 @@ function ApodCard(props) {
           d={pathData} 
         />
       </svg>
+    </div>
+       <div className="card-title-container">
       <span className="card-title">{props.title}</span>
+      </div>
     </div>
   )
 }

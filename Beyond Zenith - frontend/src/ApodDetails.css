@@ -3,6 +3,7 @@
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 40px;
+    margin-bottom: 20px;
     grid-column-gap: 1.25rem;
     grid-row-gap: 1.25rem;
     grid-template-rows: auto;
@@ -10,3 +11,6 @@
     grid-auto-columns: 1fr;
 }
 
+.apod-view > div:nth-child(2n + 2) {
+    transform: translateY(80px); 
+}
