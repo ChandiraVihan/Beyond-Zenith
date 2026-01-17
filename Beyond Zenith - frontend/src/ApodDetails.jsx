@@ -20,6 +20,7 @@ function Apod() {
     return (
         <div className="apod-view">
             {finalImages}  
+            
             </div>
     )
 }
