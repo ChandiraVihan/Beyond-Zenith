@@ -94,6 +94,16 @@
   z-index: 69;
 }
 
+.welcomeText-container {
+  position: absolute;
+  top: 20%;
+  left: 2%;
+  width: 650px;
+  height: 300px;
+  background-color: red;
+  
+}
+
 .spaceFact {
   margin-top: 45px;
   color: aliceblue;

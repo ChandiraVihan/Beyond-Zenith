@@ -58,6 +58,9 @@ function Home(){
     >
     </div>
     </div>
+    <div className="welcomeText-container">
+      <h1 className="welcomeText">Welcome to Beyond Zenith</h1>
+    </div>
       <div className="spaceFact">
         <img className="open-quote" src={openQuote} />
       {SpaceFacts[index]}
