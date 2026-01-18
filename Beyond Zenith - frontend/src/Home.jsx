@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import './Home.css'
 import  SpaceFacts  from "./spaceFact";
-
+import openQuote from './assets/openQuote.svg'
+import closeQuote from './assets/closeQuote.svg'
 
 
 
@@ -58,7 +59,9 @@ function Home(){
     </div>
     </div>
       <div className="spaceFact">
+        <img className="open-quote" src={openQuote} />
       {SpaceFacts[index]}
+        <img className="close-quote" src={closeQuote} />
     </div>
     </>
     ) 

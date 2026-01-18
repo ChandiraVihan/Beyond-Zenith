@@ -12,5 +12,5 @@
 }
 
 .apod-view > div:nth-child(2n + 2) {
-    transform: translateY(80px); 
+    transform: translateY(120px); 
 }
