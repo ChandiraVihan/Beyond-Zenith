@@ -3,6 +3,7 @@ import './Home.css'
 import  SpaceFacts  from "./spaceFact";
 import openQuote from './assets/openQuote.svg'
 import closeQuote from './assets/closeQuote.svg'
+import Rocket from './assets/getStarted.svg'
 
 
 
@@ -60,8 +61,10 @@ function Home(){
     </div>
     <div className="welcomeText-container">
       <h1 className="welcomeText">Welcome to Beyond Zenith</h1>
+      <img className="rocketImage" src={Rocket} />
     </div>
       <div className="spaceFact">
+        <h2>Did You Know?</h2>
         <img className="open-quote" src={openQuote} />
       {SpaceFacts[index]}
         <img className="close-quote" src={closeQuote} />
