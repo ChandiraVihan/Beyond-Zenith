@@ -23,7 +23,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  clip-path: path();
+  clip-path: path("M ");
 }
 
 /* The Custom Tech Badge */
@@ -126,6 +126,7 @@
   display: inline-block;
   top: -30px;
   left: 20px;
+  margin-right: 10px;
   width: 40px;
   height: 40px;
   opacity: 1;
